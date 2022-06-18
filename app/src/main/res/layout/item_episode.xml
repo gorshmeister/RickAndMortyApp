@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="6dp"
+    android:paddingBottom="10dp"
+    tools:background="@color/black_background_primary">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvAirDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="air date:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvSeason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="season:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvAirDate" />
+
+    <TextView
+        android:id="@+id/tvEpisode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="episode:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvSeason" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="tvAirDate, tvSeason, tvEpisode" />
+
+    <TextView
+        android:id="@+id/tvAirDateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="December 2, 2013" />
+
+    <TextView
+        android:id="@+id/tvSeasonValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvAirDateValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvAirDateValue"
+        tools:text="00" />
+
+    <TextView
+        android:id="@+id/tvEpisodeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvAirDateValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeasonValue"
+        tools:text="01" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

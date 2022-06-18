@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">The Rick and Morty</string>
+    <string name="characters">Персонажи</string>
+    <string name="locations">Локации</string>
+    <string name="episodes">Эпизоды</string>
+    <string name="back">Назад</string>
+    <string name="enter_name">Enter name</string>
+</resources>
