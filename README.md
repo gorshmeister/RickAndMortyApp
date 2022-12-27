@@ -83,7 +83,6 @@ The design is at the discretion of the contractor, only the general appearance o
 ***
 
 ## The application implements:
- - CleanArchitecture 
  - OkHttp
  - Retrofit
  - Glide
